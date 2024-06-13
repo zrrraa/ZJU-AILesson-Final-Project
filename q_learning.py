@@ -283,7 +283,7 @@ def train(iteration, alpha, gamma, epsilon):
             obs = next_obs
         
         # 定期测试
-        if (i+1) > 30000:
+        if (i+1) % 1 == 0:
             avg_score = test_model(player)
             if avg_score > best_avg_score:
                 best_avg_score = avg_score
